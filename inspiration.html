@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspiration & Resources</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Modal Styles (Pure CSS) */
+    .photographer-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    
+    .photographer-modal:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .modal-content {
+      background: white;
+      width: 80%;
+      max-width: 700px;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .close-modal:hover {
+      color: #333;
+    }
+    
+    .modal-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .clickable-name {
+      cursor: pointer;
+      color: #333;
+      transition: all 0.3s;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+    }
+    
+    .clickable-name:hover {
+      color: #ff6600;
+      text-decoration-color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Banner -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Inspiration & Resources<br><span>Guiding Lights in Photography</span></h1>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html">Home</a>
+      <a href="steps.html">Step by Step</a>
+      <a href="inspiration.html">Inspiration</a>
+      <a href="portfolio.html">Portfolio</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="content">
+      <h2 class="topic-title">Photographers Who Inspire Me</h2>
+      
+      <!-- Enhanced Table Design -->
+      <div class="table-container">
+        <table class="inspiration-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user"></i> Name</th>
+              <th><i class="fas fa-camera"></i> Speciality</th>
+              <th><i class="fas fa-globe"></i> Website</th>
+              <th><i class="fas fa-info-circle"></i> More Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Marcus Bleasdale -->
+            <tr>
+              <td>
+                <a href="#marcus-modal" class="photographer-name clickable-name">
+                  Marcus Bleasdale
+                </a>
+              </td>
+              <td><span class="speciality-badge documentary">Documentary</span></td>
+              <td><a href="http://www.marcusbleasdale.com/" target="_blank" class="website-link">View Portfolio <i class="fas fa-external-link-alt"></i></a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Marcus_Bleasdale" target="_blank" class="info-link">Read Bio <i class="fas fa-book-open"></i></a></td>
+            </tr>
+            
+            <!-- Annie Leibovitz -->
+            <tr>
+              <td>
+                <a href="#annie-modal" class="photographer-name clickable-name">
+                  Annie Leibovitz
+                </a>
+              </td>
+              <td><span class="speciality-badge portrait">Portrait</span></td>
+              <td><a href="https://www.artnet.com/artists/annie-leibovitz/" target="_blank" class="website-link">View Portfolio <i class="fas fa-external-link-alt"></i>	      </a></td>
+              <td><a href="https://en.wikipedia.org/wiki/Annie_Leibovitz" target="_blank" class="info-link">Read Bio <i class="fas fa-book-open"></i></a></td>
+            </tr>
+            
+            <!-- Phil Penman -->
+            <tr>
+              <td>
+                <a href="#phil-modal" class="photographer-name clickable-name">
+                  Phil Penman
+                </a>
+              </td>
+              <td><span class="speciality-badge street">Street</span></td>
+              <td><a href="https://www.philpenman.com/" target="_blank" class="website-link">View Portfolio <i class="fas fa-external-link-alt"></i></a></td>
+              <td><a href="https://www.philpenman.com/" target="_blank" class="info-link">Read Bio <i class="fas fa-book-open"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Inspirational Quote -->
+      <div class="quote-box">
+        <blockquote>
+          "Photography is the story I fail to put into words."
+          <cite>— Destin Sparks</cite>
+        </blockquote>
+      </div>
+    </section>
+    <nav class="bottom-nav">
+      <div class="nav-links">
+        <a href="index.html" class="nav-item">
+          <div class="nav-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="steps.html" class="nav-item">
+          <div class="nav-icon">
+            <i class="fas fa-map-signs"></i> <!-- Fixed icon -->
+          </div>
+          <span class="nav-text">Step by Step</span>
+        </a>
+        <a href="inspiration.html" class="nav-item active">
+          <div class="nav-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <span class="nav-text">Inspiration</span>
+        </a>
+        <a href="portfolio.html" class="nav-item"> <!-- This line must be added -->
+          <div class="nav-icon"><i class="fas fa-camera"></i></div>
+          <span class="nav-text">Portfolio</span>
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <!-- Image Modals (Hidden by default) -->
+  <div id="marcus-modal" class="photographer-modal">
+    <div class="modal-content">
+      <a href="#" class="close-modal">&times;</a>
+      <div class="modal-image-container smaller-image"> <!-- Added 'smaller-image' class -->
+        <img src="marcus-bleasdale.jpeg" alt="Marcus Bleasdale's work" class="modal-image" loading="lazy">
+      </div>
+      <h3>Marcus Bleasdale</h3>
+      <p>Documentary photographer focusing on human rights issues.</p>
+    </div>
+  </div>
+
+  <div id="annie-modal" class="photographer-modal">
+    <div class="modal-content">
+      <a href="#" class="close-modal">&times;</a>
+      <div class="modal-image-container smaller-image">      
+        <img src="annie-leibovitz.jpg" alt="Annie Leibovitz's work" class="modal-image" loading="lazy">
+      </div>
+      <h3>Annie Leibovitz</h3>
+      <p>Legendary portrait photographer known for celebrity and cultural icons.</p>
+    </div>
+  </div>
+
+  <div id="phil-modal" class="photographer-modal">
+    <div class="modal-content">
+      <a href="#" class="close-modal">&times;</a>
+      <div class="modal-image-container smaller-image">   
+      <img src="phil-penman.jpeg" alt="Phil Penman's work" class="modal-image" loading="lazy">
+      </div>
+      <h3>Phil Penman</h3>
+      <p>Master of black-and-white street photography capturing urban life.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Lee Jun How | Future Photographer</p>
+  </footer>
+</body>
+</html>
